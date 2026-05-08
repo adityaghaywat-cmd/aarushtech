@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hero Slider Page</title>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100">
+
+  <!-- Navbar -->
+  <nav class="bg-white shadow-md fixed w-full z-50">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold text-blue-600">MyWebsite</h1>
+
+      <ul class="hidden md:flex space-x-8 font-medium text-gray-700">
+        <li><a href="index.html" class="hover:text-blue-600 transition">Home</a></li>
+        <li><a href="about.html" class="hover:text-blue-600 transition">About</a></li>
+        <li><a href="services.html" class="hover:text-blue-600 transition">Services</a></li>
+        <li><a href="contact.html" class="hover:text-blue-600 transition">Contact</a></li>
+        <li><a href="inquiry.html" class="hover:text-blue-600 transition">Inquiry</a></li>
+      </ul>
+
+      <!-- Mobile Menu Button -->
+      <button id="menu-btn" class="md:hidden text-gray-700 text-2xl">
+        ☰
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white px-6 pb-4">
+      <ul class="space-y-3 font-medium text-gray-700">
+        <li><a href="#" class="block hover:text-blue-600">Home</a></li>
+        <li><a href="#" class="block hover:text-blue-600">About</a></li>
+        <li><a href="#" class="block hover:text-blue-600">Services</a></li>
+        <li><a href="#" class="block hover:text-blue-600">Contact</a></li>
+        <li><a href="#" class="block hover:text-blue-600">Inquiry</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Slider -->
+  <section class="relative w-full h-screen overflow-hidden">
+
+    <!-- Slides -->
+    <div id="slider" class="w-full h-full relative">
+
+      <!-- Slide 1 -->
+      <div class="slide absolute inset-0 bg-cover bg-center flex items-center justify-center transition-opacity duration-1000"
+        style="background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb');">
+        <div class="bg-black/50 p-10 rounded-xl text-center text-white">
+          <h2 class="text-5xl font-bold mb-4">Welcome to Our Website</h2>
+          <p class="text-lg mb-6">We create modern and responsive websites.</p>
+          <button class="bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-lg font-semibold">
+            Learn More
+          </button>
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="slide absolute inset-0 bg-cover bg-center flex items-center justify-center opacity-0 transition-opacity duration-1000"
+        style="background-image: url('https://images.unsplash.com/photo-1493246507139-91e8fad9978e');">
+        <div class="bg-black/50 p-10 rounded-xl text-center text-white">
+          <h2 class="text-5xl font-bold mb-4">Creative Solutions</h2>
+          <p class="text-lg mb-6">Innovative designs for your business growth.</p>
+          <button class="bg-green-600 hover:bg-green-700 px-6 py-3 rounded-lg font-semibold">
+            Explore
+          </button>
+        </div>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="slide absolute inset-0 bg-cover bg-center flex items-center justify-center opacity-0 transition-opacity duration-1000"
+        style="background-image: url('https://images.unsplash.com/photo-1519389950473-47ba0277781c');">
+        <div class="bg-black/50 p-10 rounded-xl text-center text-white">
+          <h2 class="text-5xl font-bold mb-4">Grow Your Business</h2>
+          <p class="text-lg mb-6">Professional services tailored to your needs.</p>
+          <button class="bg-red-600 hover:bg-red-700 px-6 py-3 rounded-lg font-semibold">
+            Get Started
+          </button>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Slider Controls -->
+    <button id="prev"
+      class="absolute left-5 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-white text-black px-4 py-2 rounded-full text-xl">
+      ❮
+    </button>
+
+    <button id="next"
+      class="absolute right-5 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-white text-black px-4 py-2 rounded-full text-xl">
+      ❯
+    </button>
+
+  </section>
+
+  <!-- JavaScript -->
+  <script>
+    // Mobile Menu
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Slider
+    const slides = document.querySelectorAll('.slide');
+    const nextBtn = document.getElementById('next');
+    const prevBtn = document.getElementById('prev');
+
+    let currentSlide = 0;
+
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.classList.toggle('opacity-0', i !== index);
+        slide.classList.toggle('opacity-100', i === index);
+      });
+    }
+
+    nextBtn.addEventListener('click', () => {
+      currentSlide = (currentSlide + 1) % slides.length;
+      showSlide(currentSlide);
+    });
+
+    prevBtn.addEventListener('click', () => {
+      currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+      showSlide(currentSlide);
+    });
+
+    // Auto Slide
+    setInterval(() => {
+      currentSlide = (currentSlide + 1) % slides.length;
+      showSlide(currentSlide);
+    }, 5000);
+
+    showSlide(currentSlide);
+  </script>
+
+</body>
+</html>
