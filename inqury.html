@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Aarush Technology - Inquiry Page</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body{
+      background: linear-gradient(135deg, #0f172a, #1e3a8a, #06b6d4);
+      min-height:100vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      padding:20px;
+    }
+
+    .container{
+      width:100%;
+      max-width:700px;
+      background:white;
+      border-radius:20px;
+      padding:40px;
+      box-shadow:0 10px 30px rgba(0,0,0,0.3);
+    }
+
+    h1{
+      text-align:center;
+      color:#1e3a8a;
+      margin-bottom:10px;
+      font-size:38px;
+    }
+
+    .subtitle{
+      text-align:center;
+      color:#555;
+      margin-bottom:30px;
+      font-size:16px;
+    }
+
+    .form-group{
+      margin-bottom:20px;
+    }
+
+    label{
+      display:block;
+      margin-bottom:8px;
+      color:#0f172a;
+      font-weight:bold;
+    }
+
+    input,
+    textarea,
+    select{
+      width:100%;
+      padding:14px;
+      border:2px solid #cbd5e1;
+      border-radius:10px;
+      font-size:16px;
+      transition:0.3s;
+    }
+
+    input:focus,
+    textarea:focus,
+    select:focus{
+      border-color:#2563eb;
+      outline:none;
+      box-shadow:0 0 10px rgba(37,99,235,0.3);
+    }
+
+    textarea{
+      resize:none;
+      height:120px;
+    }
+
+    .btn{
+      width:100%;
+      padding:15px;
+      background:linear-gradient(90deg,#2563eb,#06b6d4);
+      color:white;
+      border:none;
+      border-radius:12px;
+      font-size:18px;
+      font-weight:bold;
+      cursor:pointer;
+      transition:0.3s;
+    }
+
+    .btn:hover{
+      transform:scale(1.03);
+      background:linear-gradient(90deg,#1d4ed8,#0891b2);
+    }
+
+    .footer{
+      text-align:center;
+      margin-top:25px;
+      color:#475569;
+      font-size:15px;
+      font-weight:bold;
+    }
+
+    .highlight{
+      color:#2563eb;
+    }
+
+    @media(max-width:600px){
+      .container{
+        padding:25px;
+      }
+
+      h1{
+        font-size:30px;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Aarush Technology</h1>
+    <p class="subtitle">
+      Welcome to our Inquiry Page. Please fill out the form below.
+    </p>
+
+    <form>
+      <div class="form-group">
+        <label>Full Name</label>
+        <input type="text" placeholder="Enter your name" required>
+      </div>
+
+      <div class="form-group">
+        <label>Email Address</label>
+        <input type="email" placeholder="Enter your email" required>
+      </div>
+
+      <div class="form-group">
+        <label>Phone Number</label>
+        <input type="tel" placeholder="Enter your phone number">
+      </div>
+
+      <div class="form-group">
+        <label>Inquiry Type</label>
+        <select>
+          <option>Web Development</option>
+          <option>Software Development</option>
+          <option>Digital Marketing</option>
+          <option>Technical Support</option>
+          <option>Other</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Your Message</label>
+        <textarea placeholder="Write your inquiry here..."></textarea>
+      </div>
+
+      <button type="submit" class="btn">Submit Inquiry</button>
+    </form>
+
+    <div class="footer">
+      &copy; 2026 Aarush Technology. All rights reserved. Developed with ❤️ by <span class="highlight">Rajshree Nikumbh</span>
+    </div>
+  </div>
+
+</body>
+</html>
