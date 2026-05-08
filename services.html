@@ -1,0 +1,298 @@
+<nav class="bg-white shadow-md fixed w-full z-50">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold text-blue-600">MyWebsite</h1>
+
+      <ul class="hidden md:flex space-x-8 font-medium text-gray-700">
+        <li><a href="index.html" class="hover:text-blue-600 transition">Home</a></li>
+        <li><a href="about.html" class="hover:text-blue-600 transition">About</a></li>
+        <li><a href="services.html" class="hover:text-blue-600 transition">Services</a></li>
+        <li><a href="contact.html" class="hover:text-blue-600 transition">Contact</a></li>
+        <li><a href="inquiry.html" class="hover:text-blue-600 transition">Inquiry</a></li>
+      </ul>
+
+      <!-- Mobile Menu Button -->
+      <button id="menu-btn" class="md:hidden text-gray-700 text-2xl">
+        ☰
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white px-6 pb-4">
+      <ul class="space-y-3 font-medium text-gray-700">
+        <li><a href="#" class="block hover:text-blue-600">Home</a></li>
+        <li><a href="#" class="block hover:text-blue-600">About</a></li>
+        <li><a href="#" class="block hover:text-blue-600">Services</a></li>
+        <li><a href="#" class="block hover:text-blue-600">Contact</a></li>
+        <li><a href="#" class="block hover:text-blue-600">Inquiry</a></li>
+      </ul>
+    </div>
+  </nav>
+# Modern IT Services Page (Tailwind CSS)
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IT Services</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+</head>
+
+<body class="bg-gray-100 text-gray-800">
+
+  <!-- Navbar -->
+  <nav class="bg-white shadow-lg fixed top-0 left-0 w-full z-50">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+
+      <h1 class="text-3xl font-bold text-blue-600">
+        TechSolutions
+      </h1>
+
+      <ul class="hidden md:flex gap-8 font-medium text-gray-700">
+        <li><a href="index.html" class="hover:text-blue-600 transition">Home</a></li>
+        <li><a href="about.html" class="hover:text-blue-600 transition">About</a></li>
+        <li><a href="services.html" class="text-blue-600 font-semibold">Services</a></li>
+        <li><a href="contact.html" class="hover:text-blue-600 transition">Contact</a></li>
+        <li><a href="inquiry.html" class="hover:text-blue-600 transition">Inquiry</a></li>
+      </ul>
+
+      <!-- Mobile Menu Button -->
+      <button id="menu-btn" class="md:hidden text-2xl text-gray-700">
+        ☰
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white px-6 pb-4">
+      <ul class="space-y-4 text-gray-700 font-medium">
+        <li><a href="index.html" class="block hover:text-blue-600">Home</a></li>
+        <li><a href="about.html" class="block hover:text-blue-600">About</a></li>
+        <li><a href="services.html" class="block text-blue-600">Services</a></li>
+        <li><a href="contact.html" class="block hover:text-blue-600">Contact</a></li>
+        <li><a href="inquiry.html" class="block hover:text-blue-600">Inquiry</a></li>
+      </ul>
+    </div>
+  </nav>
+
+
+  <!-- Hero Section -->
+  <section class="relative h-[80vh] bg-cover bg-center flex items-center justify-center"
+    style="background-image: url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1920');">
+
+    <div class="absolute inset-0 bg-black/70"></div>
+
+    <div class="relative z-10 text-center text-white px-6">
+      <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+        Modern IT Solutions
+      </h1>
+
+      <p class="text-lg md:text-2xl text-gray-200 mb-8 max-w-3xl mx-auto">
+        Development, Deployment, Cloud, DevOps, Security, Automation and Complete Digital Transformation Services.
+      </p>
+
+      <div class="flex flex-col md:flex-row gap-4 justify-center">
+        <button class="bg-blue-600 hover:bg-blue-700 px-8 py-4 rounded-xl font-semibold text-lg transition">
+          Explore Services
+        </button>
+
+        <button class="border border-white hover:bg-white hover:text-black px-8 py-4 rounded-xl font-semibold text-lg transition">
+          Contact Us
+        </button>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Services Section -->
+  <section class="py-24 max-w-7xl mx-auto px-6">
+
+    <div class="text-center mb-16">
+      <h2 class="text-5xl font-bold mb-5 text-gray-900">
+        Our IT Services
+      </h2>
+
+      <p class="text-gray-600 text-lg max-w-3xl mx-auto">
+        We provide enterprise-grade IT solutions for startups, businesses, and organizations using modern technologies.
+      </p>
+    </div>
+
+
+    <!-- Service Cards -->
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+
+      <!-- Card 1 -->
+      <div class="bg-white rounded-3xl shadow-lg p-8 hover:-translate-y-3 transition duration-300">
+        <div class="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mb-6">
+          <i class="fa-solid fa-code text-3xl text-blue-600"></i>
+        </div>
+
+        <h3 class="text-2xl font-bold mb-4">
+          Web Development
+        </h3>
+
+        <p class="text-gray-600 leading-7">
+          Responsive and modern websites using HTML, CSS, JavaScript, React, Node.js and modern frameworks.
+        </p>
+      </div>
+
+
+      <!-- Card 2 -->
+      <div class="bg-white rounded-3xl shadow-lg p-8 hover:-translate-y-3 transition duration-300">
+        <div class="w-16 h-16 bg-green-100 rounded-2xl flex items-center justify-center mb-6">
+          <i class="fa-solid fa-cloud text-3xl text-green-600"></i>
+        </div>
+
+        <h3 class="text-2xl font-bold mb-4">
+          Cloud Solutions
+        </h3>
+
+        <p class="text-gray-600 leading-7">
+          AWS, Azure and Google Cloud infrastructure setup, migration, hosting and scaling services.
+        </p>
+      </div>
+
+
+      <!-- Card 3 -->
+      <div class="bg-white rounded-3xl shadow-lg p-8 hover:-translate-y-3 transition duration-300">
+        <div class="w-16 h-16 bg-purple-100 rounded-2xl flex items-center justify-center mb-6">
+          <i class="fa-solid fa-server text-3xl text-purple-600"></i>
+        </div>
+
+        <h3 class="text-2xl font-bold mb-4">
+          DevOps & Deployment
+        </h3>
+
+        <p class="text-gray-600 leading-7">
+          CI/CD pipelines, Docker, Kubernetes, Jenkins automation and production deployment solutions.
+        </p>
+      </div>
+
+
+      <!-- Card 4 -->
+      <div class="bg-white rounded-3xl shadow-lg p-8 hover:-translate-y-3 transition duration-300">
+        <div class="w-16 h-16 bg-red-100 rounded-2xl flex items-center justify-center mb-6">
+          <i class="fa-solid fa-shield-halved text-3xl text-red-600"></i>
+        </div>
+
+        <h3 class="text-2xl font-bold mb-4">
+          Cyber Security
+        </h3>
+
+        <p class="text-gray-600 leading-7">
+          Security monitoring, vulnerability scanning, firewall management and secure cloud architecture.
+        </p>
+      </div>
+
+
+      <!-- Card 5 -->
+      <div class="bg-white rounded-3xl shadow-lg p-8 hover:-translate-y-3 transition duration-300">
+        <div class="w-16 h-16 bg-yellow-100 rounded-2xl flex items-center justify-center mb-6">
+          <i class="fa-solid fa-database text-3xl text-yellow-600"></i>
+        </div>
+
+        <h3 class="text-2xl font-bold mb-4">
+          Database Management
+        </h3>
+
+        <p class="text-gray-600 leading-7">
+          MySQL, MongoDB, PostgreSQL and cloud database optimization and backup solutions.
+        </p>
+      </div>
+
+
+      <!-- Card 6 -->
+      <div class="bg-white rounded-3xl shadow-lg p-8 hover:-translate-y-3 transition duration-300">
+        <div class="w-16 h-16 bg-cyan-100 rounded-2xl flex items-center justify-center mb-6">
+          <i class="fa-solid fa-network-wired text-3xl text-cyan-600"></i>
+        </div>
+
+        <h3 class="text-2xl font-bold mb-4">
+          Networking Solutions
+        </h3>
+
+        <p class="text-gray-600 leading-7">
+          Enterprise networking, server management, VPN setup and infrastructure monitoring services.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+                <h1> services page created by Krishna </h1>
+
+  <!-- Why Choose Us -->
+  <section class="bg-gray-900 text-white py-24">
+    <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+
+      <div>
+        <img
+          src="https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=1200"
+          class="rounded-3xl shadow-2xl"
+          alt="IT Team"
+        />
+      </div>
+
+      <div>
+        <h2 class="text-5xl font-bold mb-8 leading-tight">
+          Why Choose Our IT Company?
+        </h2>
+
+        <div class="space-y-6 text-lg text-gray-300">
+          <p>✔ Experienced Developers & DevOps Engineers</p>
+          <p>✔ Scalable Cloud Infrastructure</p>
+          <p>✔ Fast & Secure Deployments</p>
+          <p>✔ 24/7 Technical Support</p>
+          <p>✔ Modern Technology Stack</p>
+          <p>✔ SEO & Performance Optimized Solutions</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- CTA Section -->
+  <section class="py-24 bg-blue-600 text-center text-white px-6">
+
+    <h2 class="text-5xl font-bold mb-6">
+      Ready To Grow Your Business?
+    </h2>
+
+    <p class="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+      Let us help you build scalable, secure and high-performing digital solutions.
+    </p>
+
+    <button class="bg-white text-blue-600 hover:bg-gray-200 px-10 py-4 rounded-2xl font-bold text-lg transition">
+      Get Free Consultation
+    </button>
+  </section>
+
+
+  <!-- Footer -->
+  <footer class="bg-black text-gray-400 py-10 text-center">
+    <p class="text-lg">
+      © 2026 TechSolutions. All Rights Reserved.
+    </p>
+  </footer>
+
+
+  <!-- JavaScript -->
+  <script>
+
+    // Mobile Menu
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+  </script>
+
+</body>
+</html>
